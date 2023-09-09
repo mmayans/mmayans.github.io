@@ -45,11 +45,25 @@ section h2 {
 }
 
 .project {
-    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .project img {
-    max-width: 16.66667%; /* 1/6th of the screen width */
+    max-width: 33%; /* Each image takes up one-third of the container */
+    margin-right: 10px; /* Add some space between the images */
+}
+
+.project h3 {
+    flex-grow: 1;
+    margin: 0;
+    max-width: 50%; /* Limit text width */
+}
+
+.project p {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    max-width: 50%; /* Limit text width */
 }
 
 .expandable {
