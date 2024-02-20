@@ -12,8 +12,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 700px; /* Optional: adjust the maximum width of the container */
+    margin: 20 auto;
+    
 }
 
 header {
