@@ -19,12 +19,81 @@
 <article>
     <header>
         <div class="container">
-            <h1>This is the index.html page</h1>
-            <p>embedded below is the game</p>
+            <h1>Madeline's Portfolio</h1>
+            <p>Computer Science Major</p>
         </div>
     </header>
-    <embed src="temp/index.html" style="width:800px; height: 600px;">
-    
+
+    <section id="intro">
+        <div class="container">
+            <p>Hello, I'm Madeline, a computer science major.</p>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <h3>Education</h3>
+            <p>Bachelor of Science in Computer Science | Arizona State University | Graduation date May 2024</p>
+            <h3>Skills</h3>
+            <div class="expandable" id="skills">
+                <span onclick="toggleSkills()">(Click to Expand)</span>
+                <ul class="hidden">
+                    <li>Programming languages: Java, C#, Python, C++</li>
+                    <li>Web Development: HTML, CSS, JavaScript, XML, .NET</li>
+                    <li>Database Management: SQL, JournalDB</li>
+                    <li>Data Analytics: Excel, Tableau</li>
+                    <li>Game Development: Unity, GameMaker Studio 2</li>
+                </ul>
+            </div>
+            <h3>Experience</h3>
+            <div class="expandable" id="exp">
+                <span onclick="toggleExp()">(Click to Expand)</span>
+                <ul class="hidden">
+                    <h4>Software Development Engineering Intern | Amazon | Summer 2023</h4>
+                    <p>Workflow stuff.</p>
+                    <h4>Undergraduate Teaching Assistant | Arizona State University | Fall 2023 - Present</h4>
+                    <p>Provided one-on-one tutoring for students in videogame development course. Assisted with understanding course material and assignments. Answered questions about Unity.</p>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+
+            <div class="project" id="project1" onclick="toggleProject('project1')">
+                <img src="image.png" alt="Project 1">
+                <h3>Project 1</h3>
+                <p class="description hidden">Description of Project 1. I am typing a lot here 
+                to take up space so that it counts as a paragraph idk how many words
+                i need to type but i think this should be good hope this helps I am typing a lot here
+                    to take up space so that it counts as a paragraph idk how many words
+                    i need to type but i think this should be good hope this helps</p>
+            </div>
+
+            <div class="project" id="project2" onclick="toggleProject('project2')">
+                <img src="image.png" alt="Project 2">
+                <h3>Project 2</h3>
+                <p class="description hidden">Description of Project 2. I am typing a lot here
+                    to take up space so that it counts as a paragraph  idk how many words
+                    i need to type but i think this should be good hope this helps I am typing a lot here
+                    to take up space so that it counts as a paragraph idk how many words
+                    i need to type but i think this should be good hope this helps</p>
+            </div>
+
+            <div class="project" id="project3" onclick="toggleProject('project3')">
+                <img src="image.png" alt="Project 3">
+                <h3>Project 3</h3>
+                <p class="description hidden">Description of Project 3. I am typing a lot here
+                    to take up space so that it counts as a paragraph idk how many words
+                    i need to type but i think this should be good hope this helps I am typing a lot here
+                    to take up space so that it counts as a paragraph idk how many words
+                    i need to type but i think this should be good hope this helps</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -33,6 +102,23 @@
     </footer>
 </article>
 
+<script>
+    function toggleSkills() {
+        var skillsList = document.querySelector('#skills ul');
+        skillsList.classList.toggle('hidden');
+    }
+
+    function toggleExp() {
+        var skillsList = document.querySelector('#exp ul');
+        skillsList.classList.toggle('hidden');
+    }
+    
+        function toggleProject(id) {
+        var project = document.getElementById(id);
+        var paragraph = project.querySelector('.description');
+        paragraph.classList.toggle('hidden');
+    }
+</script>
 
 </body>
 
